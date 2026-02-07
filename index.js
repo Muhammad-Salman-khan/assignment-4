@@ -352,3 +352,42 @@
 //   .then(() => console.log("jejeje "))
 //   .catch((e) => console.log(e));
 // Task 4.3 – Promises vs Callbacks (Hard)(End!)
+
+// Final Project (Medium → Hard)
+// Asynchronous Task Manager App
+// Build a small JavaScript task manager application that:
+// Uses OOP principles (classes or constructors)
+// Stores tasks with private state (closures)
+// Executes tasks asynchronously
+// Controls context using  bind
+// Final Project (Medium → Hard)(Start!)
+class TaskManager {
+  constructor() {
+    let task = [];
+    this.addTask = function (FunName, SaveFunction) {
+      task.push({ FunName, SaveFunction });
+      console.log(`All Save task's \n`, ...task);
+    };
+    this.runnerAllTask = async function () {
+      for (const tasks of task) {
+        const runTask = tasks.SaveFunction.bind(this);
+        await runTask();
+      }
+    };
+  }
+}
+const TaskHandler = new TaskManager();
+TaskHandler.addTask("Wy me", async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  if (!res.ok) throw new Error("failed to fetch");
+  const data = await res.json();
+  console.log("user Data", data);
+});
+TaskHandler.addTask("REKkki", async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  if (!res.ok) throw new Error("failed to fetch");
+  const data = await res.json();
+  console.log("Todo Data", data);
+});
+TaskHandler.runnerAllTask();
+// Final Project (Medium → Hard)(End!)
