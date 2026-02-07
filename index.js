@@ -233,5 +233,43 @@
 // Override a method and use  super  correctly.
 // Demonstrate polymorphism using runtime logs.
 // Task 3.3 – Inheritance & Method Overriding (Start!)
+// class UserRoles {
+//   id = crypto.randomUUID();
+//   createdAt = new Intl.DateTimeFormat("en-US", {
+//     weekday: "short",
+//     day: "numeric",
+//     month: "numeric",
+//     year: "numeric",
+//     hour: "numeric",
+//     minute: "numeric",
+//     second: "numeric",
+//   }).format(new Date());
+//   role = "user";
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+//   login() {
+//     console.log(
+//       `user loggedIn Successfully with a name:${this.name} and email: ${this.email} role ${this.role}`,
+//     );
+//   }
+// }
+// class AdminRole extends UserRoles {
+//   constructor(name, email, roleChange) {
+//     super();
+//     this.name = name;
+//     this.email = email;
+//     this.role = roleChange;
+//   }
+//   login() {
+//     super.login();
+//     console.log(`${this.name} is now loggedIn As Role: ${this.role}`);
+//   }
+// }
 
+// const testSub0 = new UserRoles("Salman", "s1@gmail.com");
+// const testSub01 = new AdminRole("Hachiman", "Haciman@gmail.com", "Admin");
+// testSub0.login();
+// testSub01.login();
 // Task 3.3 – Inheritance & Method Overriding (End!)
