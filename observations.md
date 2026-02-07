@@ -45,4 +45,4 @@ using class is much clearner and simpler than function construction and we don't
 and create new method we just need to define or method inside the same class and it's cleaner and much better compare to function constructo
 
 **Task 3.3 – Inheritance & Method Overriding (Hard)**
-Create a base class and a derived class that extends it. Implement method overriding in the derived class to show how it can provide a different implementation of a method defined in the base class. Demonstrate the use of super to call the base class method from the derived class.
+i just create a parent class UserRoles and then extend it to create AdminRoles that inherit properties and methods login from UserRoles . each subclass can have its own specific methods and can also override methods from the parent class to provide specialized behavior.
