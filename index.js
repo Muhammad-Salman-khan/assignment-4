@@ -282,32 +282,73 @@
 // Log output order and explain it using execution timing (via logs).
 // Task 4.1 – Sync vs Async Execution Order(Start!)
 
-function ff1(e) {
-  console.log(`sync Function 1 Start`, new Date().getMilliseconds());
-  e;
-}
-function ff2(e) {
-  console.log(`sync Function 2 Start ${new Date().getMilliseconds()}`);
+// function ff1(e) {
+//   console.log(`sync Function 1 Start`, new Date().getMilliseconds());
+//   e;
+// }
+// function ff2(e) {
+//   console.log(`sync Function 2 Start ${new Date().getMilliseconds()}`);
 
-  console.log(`symc Function 2 ended ${new Date().getMilliseconds()}`);
-  e;
-}
-function ff3(e) {
-  console.log(`Async Function 3 Started ${new Date().getMilliseconds()}`);
-  setTimeout(() => {
-    console.log(`Async Function 3 Ended ${new Date().getMilliseconds()}`);
-    e();
-  }, 500);
-}
-function ff4() {
-  console.log(`Async Function 4 Started ${new Date().getMilliseconds()}`);
-  setTimeout(() => {
-    console.log(`Async Function 4 Ended ${new Date().getMilliseconds()}`);
-  }, 500);
-}
-ff1(ff2(ff3(ff4)));
-console.log(
-  `sync code run immediatitly during initial callstack  compare to async code becuase async will wait for the code to run for respected time like setTimeout  and async await`,
-);
+//   console.log(`symc Function 2 ended ${new Date().getMilliseconds()}`);
+//   e;
+// }
+// function ff3(e) {
+//   console.log(`Async Function 3 Started ${new Date().getMilliseconds()}`);
+//   setTimeout(() => {
+//     console.log(`Async Function 3 Ended ${new Date().getMilliseconds()}`);
+//     e();
+//   }, 500);
+// }
+// function ff4() {
+//   console.log(`Async Function 4 Started ${new Date().getMilliseconds()}`);
+//   setTimeout(() => {
+//     console.log(`Async Function 4 Ended ${new Date().getMilliseconds()}`);
+//   }, 500);
+// }
+// ff1(ff2(ff3(ff4)));
+// console.log(
+//   `sync code run immediatitly during initial callstack  compare to async code becuase async will wait for the code to run for respected time like setTimeout  and async await`,
+// );
 
 // Task 4.1 – Sync vs Async Execution Order(End!)
+
+// Task 4.2 – Callback Hell Simulation
+// Create nested callbacks that:
+// Depend on previous results
+// Clearly show execution depth
+// Log timestamps and nesting levels.
+
+// Task 4.2 – Callback Hell Simulation(Start!)
+// setTimeout(() => {
+//   console.log(`first ${new Date().getMilliseconds()} `);
+//   setTimeout(() => {
+//     console.log(`Second ${new Date().getMilliseconds()}`);
+//     setTimeout(() => {
+//       console.log(`Third ${new Date().getMilliseconds()}`);
+//       setTimeout(() => {
+//         console.log(`Fourth ${new Date().getMilliseconds()}`);
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
+
+// Task 4.2 – Callback Hell Simulation(End!)
+
+// Task 4.3 – Promises vs Callbacks (Hard)
+// Rewrite Task 4.2 using Promises.
+// Compare readability and execution fow using logs.
+// Task 4.3 – Promises vs Callbacks (Hard)(Start!)
+// const Promises = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Donee");
+//   }, 3000);
+// });
+
+// Promises.then((e) => console.log(e))
+//   .then(() => {
+//     setTimeout(() => console.log(`Data is arived`), 300);
+//   })
+//   .then(() => console.log("We can see you "))
+//   .then(() => console.log("jejeje "))
+//   .catch((e) => console.log(e));
+// Task 4.3 – Promises vs Callbacks (Hard)(End!)

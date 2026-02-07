@@ -53,3 +53,13 @@ i just create a parent class UserRoles and then extend it to create AdminRoles t
 show how synchronous functions block execution until they complete, while asynchronous functions allow other code to run while waiting for the respected time or wait for there data to come like setTimeout or fetch api.
 
 <hr/>
+
+**Task 4.2 – Callback Hell Simulation**
+create a series of nested asynchronous functions using callbacks to demonstrate callback hell. this can be done by simulating a sequence of asynchronous operations, such as logs, passing it, and then making the nested structure of callbacks will illustrate the complexity and readability issues associated with callback hell.
+
+<hr/>
+
+**Task 4.3 – Promises vs Callbacks (Hard)**
+I use promises to handle asynchronous operations instead of callbacks. create a function that returns a promise, simulating an asynchronous task like fetching data. demonstrate how to use .then() and .catch() to handle the resolved and rejected states of the promise, highlighting the advantages of promises over traditional callback-based approaches in terms of readability and error handling.
+
+<hr/>
