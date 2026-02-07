@@ -40,7 +40,7 @@ create user 1 and user 2 with different email and name and id sharing the same m
 
 <h2>Task 3.2 – ES6 Classes (Comparison)</h2>
 
-**Rewrite Task 3.1 using ES6 class syntax**
+**Rewrite Task 3.2 using ES6 class syntax**
 using class is much clearner and simpler than function construction and we don't need to write .prototype  
 and create new method we just need to define or method inside the same class and it's cleaner and much better compare to function constructo
 
