@@ -273,3 +273,41 @@
 // testSub0.login();
 // testSub01.login();
 // Task 3.3 – Inheritance & Method Overriding (End!)
+
+// Section 4: Asynchronous JavaScript
+// Task 4.1 – Sync vs Async Execution Order
+// Write code that mixes:
+// Normal functions
+// Timers
+// Log output order and explain it using execution timing (via logs).
+// Task 4.1 – Sync vs Async Execution Order(Start!)
+
+function ff1(e) {
+  console.log(`sync Function 1 Start`, new Date().getMilliseconds());
+  e;
+}
+function ff2(e) {
+  console.log(`sync Function 2 Start ${new Date().getMilliseconds()}`);
+
+  console.log(`symc Function 2 ended ${new Date().getMilliseconds()}`);
+  e;
+}
+function ff3(e) {
+  console.log(`Async Function 3 Started ${new Date().getMilliseconds()}`);
+  setTimeout(() => {
+    console.log(`Async Function 3 Ended ${new Date().getMilliseconds()}`);
+    e();
+  }, 500);
+}
+function ff4() {
+  console.log(`Async Function 4 Started ${new Date().getMilliseconds()}`);
+  setTimeout(() => {
+    console.log(`Async Function 4 Ended ${new Date().getMilliseconds()}`);
+  }, 500);
+}
+ff1(ff2(ff3(ff4)));
+console.log(
+  `sync code run immediatitly during initial callstack  compare to async code becuase async will wait for the code to run for respected time like setTimeout  and async await`,
+);
+
+// Task 4.1 – Sync vs Async Execution Order(End!)
