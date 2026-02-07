@@ -23,3 +23,23 @@ without using bind, the context of this is lost when the function is executed la
 <h3> Task 2.1 – Closure Proof</h3>
 Create a function that returns another function which accesses a variable from the outer function's scope. This demonstrates that the inner function retains access to the outer function's variables even after the outer function has finished executing, proving the concept of closures.(summary)
 <hr/>
+
+**Task 2.2 – Independent Closures (Start!)**
+
+<h3>Create a function factory that:
+Produces multiple closure instances Each instance maintains independent state
+Log outputs to prove isolation</h3>
+<hr/>
+
+**Section 3: OOP with JavaScript**
+
+<h3>Task 3.1 – Constructor Functions</h3>
+Create a constructor function that initializes properties and methods. Use the new keyword to create instances and demonstrate how the constructor function sets up the object structure and behavior.
+create user 1 and user 2 with different email and name and id sharing the same method to show how constructor functions work.
+<hr/>
+
+<h2>Task 3.2 – ES6 Classes (Comparison)</h2>
+
+**Rewrite Task 3.1 using ES6 class syntax**
+using class is much clearner and simpler than function construction and we don't need to write .prototype  
+and create new method we just need to define or method inside the same class and it's cleaner and much better compare to function constructo

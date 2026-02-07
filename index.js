@@ -102,5 +102,136 @@
 // console.log(`step 3`, mySteps(12));
 // console.log(`step 4`, mySteps(10));
 // console.log(`step 5`, mySteps(49));
-
 // Section 2: Closures (Memory & Scope)(End!)
+
+// Task 2.2 – Independent Closures
+// Create a function factory that:
+// Produces multiple closure instances
+// Each instance maintains independent state
+// Log outputs to prove isolation.
+
+// Task 2.2 – Independent Closures (Start!)
+// function operation() {
+//   let newNumb = 0;
+//   console.log(`starting state is ${newNumb}`);
+
+//   return {
+//     add: (e) => {
+//       newNumb += e;
+//       return newNumb;
+//     },
+//     subtract: (e) => {
+//       newNumb -= e;
+//       return newNumb;
+//     },
+//     multiply: (e) => {
+//       newNumb *= e;
+//       return newNumb;
+//     },
+//     divide: (e) => {
+//       newNumb /= e;
+//       return newNumb;
+//     },
+//   };
+// }
+// const newOperations = operation();
+// console.log(`Addition : `, newOperations.add(3));
+// console.log(`Addition : `, newOperations.add(7));
+// console.log(`multipliction : `, newOperations.multiply(2));
+// console.log(`subtraction : `, newOperations.subtract(3));
+// console.log(`divion : `, newOperations.divide(3));
+
+// Task 2.2 – Independent Closures (End!)
+
+// Section 3: OOP with JavaScript
+// Task 3.1 – Constructor Functions
+// Build an object system using:
+// Constructor functions
+// Shared methods via prototype
+// Create multiple instances and show shared vs unique propertie
+// Task 3.1 – Constructor Functions(Start!)
+// function UserInstance(name, email) {
+//   this.name = name;
+//   this.email = email;
+//   this.id = crypto.randomUUID();
+//   this.achivement = 0;
+//   this.createdAt = Intl.DateTimeFormat("en-US", {
+//     weekday: "short",
+//     day: "numeric",
+//     month: "numeric",
+//     year: "numeric",
+//     hour: "2-digit",
+//     minute: "2-digit",
+//     second: "numeric",
+//   }).format(new Date());
+// }
+
+// UserInstance.prototype.newUser = function () {
+//   console.log(
+//     `user created Successfully with a id:${this.id} name:${this.name} and email:${this.email} createdAt: ${this.createdAt}`,
+//   );
+// };
+// UserInstance.prototype.updateEmail = function (newEmail) {
+//   this.email = newEmail;
+//   console.log(
+//     `Eamil change Successfully using Function constructor ${this.email}`,
+//   );
+// };
+// const student2 = new UserInstance("asad", "asad@gmail.com");
+// const student1 = new UserInstance("Salman", "salman@gmail.com");
+// student1.newUser();
+// student2.newUser();
+// console.log(`Similar email`, student1.email === student2.email);
+// student2.updateEmail("asad12@gmail.com");
+
+// Task 3.1 – Constructor Functions(End!)
+
+// Task 3.2 – ES6 Classes (Comparison)
+// Rewrite Task 3.1 using ES6  class  syntax.
+// Log similarities and diferences through output behavior.
+// Task 3.2 – ES6 Classes (Comparison)(Start!)
+// class UserInstanceClass {
+//   id = crypto.randomUUID();
+//   createdAt = new Intl.DateTimeFormat("en-US", {
+//     weekday: "short",
+//     day: "numeric",
+//     month: "numeric",
+//     year: "numeric",
+//     hour: "numeric",
+//     minute: "numeric",
+//     second: "numeric",
+//   }).format(new Date());
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+//   intro() {
+//     console.log(
+//       `Hey user:${this.name} and email:${this.email} createdAt: ${this.createdAt}`,
+//     );
+//   }
+//   updateEmail(newMail) {
+//     this.email = newMail;
+//     console.log(`Email updated Sucessfully using Classes ${this.email} `);
+//   }
+// }
+// const user1 = new UserInstanceClass("Salman", "salman@gmail.com");
+// user1.intro();
+// user1.updateEmail("selmon@gmail.com");
+// user1.intro();
+// console.log(`unique id's compare`, student1.id !== user1.id);
+// console.log(`compare both method`, student1.newUser === user1.intro);
+// console.log(
+//   `compare both function instructor and class `,
+//   UserInstance.updateEmail === UserInstanceClass.updateEmail,
+// );
+
+// Task 3.2 – ES6 Classes (Comparison)(End!)
+
+// Task 3.3 – Inheritance & Method Overriding (Hard)
+// Create a base class and at least one child class.
+// Override a method and use  super  correctly.
+// Demonstrate polymorphism using runtime logs.
+// Task 3.3 – Inheritance & Method Overriding (Start!)
+
+// Task 3.3 – Inheritance & Method Overriding (End!)
