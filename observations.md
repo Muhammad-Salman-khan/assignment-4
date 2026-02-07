@@ -43,3 +43,6 @@ create user 1 and user 2 with different email and name and id sharing the same m
 **Rewrite Task 3.1 using ES6 class syntax**
 using class is much clearner and simpler than function construction and we don't need to write .prototype  
 and create new method we just need to define or method inside the same class and it's cleaner and much better compare to function constructo
+
+**Task 3.3 – Inheritance & Method Overriding (Hard)**
+Create a base class and a derived class that extends it. Implement method overriding in the derived class to show how it can provide a different implementation of a method defined in the base class. Demonstrate the use of super to call the base class method from the derived class.
